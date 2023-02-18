@@ -37,7 +37,9 @@ const Navbar = () => {
         color="blue"
         icon={<AiOutlineMenu />}
       />
-      <div></div>
+      <div className='flex'>
+
+      </div>
     </div>
   );
 };
