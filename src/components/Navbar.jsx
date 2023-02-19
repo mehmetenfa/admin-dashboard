@@ -28,7 +28,15 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const {
+    currentColor,
+    activeMenu,
+    setActiveMenu,
+    handleClick,
+    isClicked,
+    setScreenSize,
+    screenSize,
+  } = useStateContext();
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
@@ -60,10 +68,16 @@ const Navbar = () => {
         />
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
-            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray"
+            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            
+            <img src={avatar} className="rounded-full w-8 h-8" />
+            <p>
+              <span className="text-gray-400 text-14">Hi, </span>{" "}
+              <span className="text-gray-400 text-14 font-bold ml-1">
+                Michael
+              </span>
+            </p>
           </div>
         </TooltipComponent>
       </div>
