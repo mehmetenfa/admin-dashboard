@@ -29,13 +29,13 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    currentColor,
     activeMenu,
     setActiveMenu,
     handleClick,
+    setIsClicked,
     isClicked,
-    setScreenSize,
     screenSize,
+    setScreenSize,
   } = useStateContext();
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -55,7 +55,7 @@ const Navbar = () => {
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
-          customFunc={() => handleClick("cart")}
+          customFunc={() => handleClick("chat")}
           color="blue"
           icon={<BsChatLeft />}
         />
