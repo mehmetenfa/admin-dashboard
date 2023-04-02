@@ -1,10 +1,16 @@
-import React from "react";
-import { BsCurrencyDollar } from "react-icons/bs";
-import { GoPrimitiveDot } from "react-icons/go";
-import { IoIosMore } from "react-icons/io";
-import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
+import React from 'react';
+import { BsCurrencyDollar } from 'react-icons/bs';
+import { GoPrimitiveDot } from 'react-icons/go';
+import { IoIosMore } from 'react-icons/io';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-import { Stacked, Pie, Button, LineChart, SparkLine } from "../components";
+import Pie from '../components/Charts/Pie';
+import Stacked from '../components/Charts/Stacked';
+import LineChart from '../components/Charts/LineChart';
+import SparkLine from '../components/Charts/SparkLine';
+import Button from '../components/Button';
+
+// import { Stacked, Pie, Button, LineChart, SparkLine } from '../components/Charts'
 import {
   earningData,
   medicalproBranding,
@@ -13,16 +19,16 @@ import {
   dropdownData,
   SparklineAreaData,
   ecomPieChartData,
-} from "../data/dummy";
-import { useStateContext } from "../contexts/ContextProvider";
-import product9 from "../data/product9.jpg";
+} from '../data/dummy';
+import { useStateContext } from '../contexts/ContextProvider';
+import product9 from '../data/product9.jpg';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
     <DropDownListComponent
       id="time"
-      fields={{ text: "Time", value: "Id" }}
-      style={{ border: "none", color: currentMode === "Dark" && "white" }}
+      fields={{ text: 'Time', value: 'Id' }}
+      style={{ border: 'none', color: currentMode === 'Darks' && 'white' }}
       value="1"
       dataSource={dropdownData}
       popupHeight="220px"
